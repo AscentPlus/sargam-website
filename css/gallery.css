@@ -123,22 +123,6 @@
     text-align: center;
 }
 
-.lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 28px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2.5rem;
-    cursor: pointer;
-    transition: transform var(--transition-fast);
-    z-index: 2001;
-}
-
-.lightbox-close:hover {
-    transform: scale(1.2);
-}
 
 .lightbox-prev,
 .lightbox-next {

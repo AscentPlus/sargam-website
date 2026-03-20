@@ -99,6 +99,13 @@ function initSmoothScroll() {
                 if (target) {
                     e.preventDefault();
                     target.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Clear hash from URL after scrolling starts
+                    setTimeout(() => {
+                        const cleanPath = window.location.pathname.replace(/index\.html$/, '') || '/';
+                        history.replaceState(null, null, cleanPath);
+                    }, 500);
+
                     // Close mobile nav if it's open
                     const nav = document.querySelector('.nav');
                     const hamburger = document.querySelector('.hamburger');
@@ -113,6 +120,24 @@ function initSmoothScroll() {
             });
         }
     });
+
+    // Handle hash on page load
+    if (window.location.hash) {
+        setTimeout(() => {
+            const target = document.querySelector(window.location.hash);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+                // Clean URL after scrolling
+                setTimeout(() => {
+                    const cleanPath = window.location.pathname.replace(/index\.html$/, '') || '/';
+                    history.replaceState(null, null, cleanPath);
+                }, 1000);
+            }
+        }, 100);
+    } else if (window.location.pathname.endsWith('index.html')) {
+        // Clean index.html on load even without hash
+        history.replaceState(null, null, window.location.pathname.replace(/index\.html$/, '') || '/');
+    }
 }
 
 /* ---- Set Active Nav Link ---- */
@@ -193,7 +218,7 @@ function openDonateQR() {
 
 function initDonateQR() {
     const modal = document.getElementById('donateQrModal');
-    const closeBtn = document.getElementById('donateQrClose');
+    const closeBtn = document.getElementById('donateQrCloseBottom');
 
     if (modal && closeBtn) {
         closeBtn.addEventListener('click', () => {
