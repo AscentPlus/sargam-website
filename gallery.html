@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Sargam Foundation</title>
+    <meta name="description"
+        content="Explore photos from Sargam Foundation's community programs, charity activities, health camps, and social welfare events in Alappuzha, Kerala.">
+    <meta name="keywords" content="Sargam Foundation gallery, charity photos, community events Alappuzha, Kerala NGO">
+
+    <link rel="icon" type="image/jpeg" href="assets/images/Logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7S0TW0N5RV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7S0TW0N5RV');
+    </script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/Logo.png" alt="Sargam Charitable Foundation Logo" style="height: 44px; width: auto; object-fit: contain; border-radius: 4px;">
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <span class="logo-text" style="line-height: 1; margin-bottom: 2px;">SARGAM</span>
+                    <span class="logo-text" style="font-size: 0.65rem; font-weight: 500; letter-spacing: 0.05em; color: var(--plum-light);">CHARITABLE FOUNDATION</span>
+                </div>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#events">Programs</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <!-- <a href="donate.html">Donate</a> -->
+                <a href="index.html#team">Contact</a>
+                <!-- <div class="nav-donate">
+                    <a href="donate.html" class="btn btn-primary btn-sm">Donate Now</a>
+                </div> -->
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-hero">
+            <div class="container">
+                <!-- <span class="badge badge-rose">📸 Our Journey in Pictures</span> -->
+                <h1>Photo Gallery</h1>
+                <p>Explore moments captured from our community programs, charity activities, and social welfare events.
+                </p>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="gallery-full">
+            <div class="container">
+                <div class="gallery-masonry" id="galleryFullGrid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image"><i
+                class="fas fa-chevron-left"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImg">
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+        </div>
+        <button class="lightbox-next" id="lightboxNext" aria-label="Next image"><i
+                class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo" style="margin-bottom: 16px;">
+                        <img src="assets/images/Logo.png" alt="Sargam Charitable Foundation Logo" style="height: 44px; width: auto; object-fit: contain; border-radius: 4px;">
+                        <div style="display: flex; flex-direction: column; justify-content: center;">
+                            <span class="logo-text" style="color: var(--milk); line-height: 1; margin-bottom: 2px;">SARGAM</span>
+                            <span class="logo-text" style="color: rgba(255,255,255,0.8); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.05em;">CHARITABLE FOUNDATION</span>
+                        </div>
+                    </div>
+                    <p>A registered charitable organization committed to empowering underprivileged communities through
+                        education, healthcare, and sustainable social programs in Alappuzha, Kerala.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:sargamalpy@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+919447344356" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=9447344356&text=Hello,%20I%20want%20to%20know%20more%20about%20Sargam%20Foundation.%20Thanks." aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#home">Home</a>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#events">Programs</a>
+                    <a href="gallery.html">Gallery</a>
+                    <!-- <a href="donate.html">Donate</a> -->
+                    <a href="index.html#team">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Our Programs</h4>
+                    <a href="index.html#program-medical">Medical Aid</a>
+                    <a href="index.html#program-elderly">Elderly Care</a>
+                    <a href="index.html#program-physical">Physical Wellness</a>
+                    <a href="index.html#program-mental">Mental Wellness</a>
+                </div>
+                <!-- <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p style="color: rgba(255,243,230,0.7); font-size: 0.9rem; margin-bottom: 16px;">Subscribe to our
+                        newsletter.</p>
+                    <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+                    <button class="btn btn-accent btn-sm"
+                        onclick="alert('Thank you for subscribing! 🎉')">Subscribe</button>
+                </div> -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sargam Foundation. All rights reserved. Designed by <a href="http://www.ascentplus.net"
+                        target="_blank">Ascent Plus</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-donate">
+        <button onclick="openDonateQR()" class="btn btn-primary">Donate Now</button>
+    </div>
+
+    <!-- Donate QR Modal -->
+    <div class="donate-qr-modal" id="donateQrModal">
+        <div class="donate-qr-content">
+            <button class="donate-qr-close" id="donateQrClose" aria-label="Close modal">&times;</button>
+            <h3>Support Our Cause</h3>
+            <p>Scan the QR code below to make a donation and help us empower the community.</p>
+            <img src="assets/images/QR.jpg" alt="Donation QR Code">
+            <p class="donate-qr-note">Every contribution, big or small, makes a difference.</p>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('galleryFullGrid');
+            const photos = DataStore.getGallery();
+
+            grid.innerHTML = photos.map((photo, i) => `
+        <div class="gallery-item reveal" data-index="${i}">
+          <img src="${photo.url}" alt="${photo.caption}" loading="lazy">
+          <div class="gallery-overlay">
+            <span>${photo.caption}</span>
+          </div>
+        </div>
+      `).join('');
+
+            // Re-init scroll reveal
+            setTimeout(() => initScrollReveal(), 100);
+
+            // Lightbox
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const lightboxCaption = document.getElementById('lightboxCaption');
+            let currentIndex = 0;
+
+            function openLightbox(index) {
+                currentIndex = index;
+                const photo = photos[index];
+                lightboxImg.src = photo.url;
+                lightboxImg.alt = photo.caption;
+                lightboxCaption.textContent = photo.caption;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            function navigate(dir) {
+                currentIndex = (currentIndex + dir + photos.length) % photos.length;
+                openLightbox(currentIndex);
+            }
+
+            grid.addEventListener('click', (e) => {
+                const item = e.target.closest('.gallery-item');
+                if (item) openLightbox(parseInt(item.dataset.index));
+            });
+
+            document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+            document.getElementById('lightboxPrev').addEventListener('click', () => navigate(-1));
+            document.getElementById('lightboxNext').addEventListener('click', () => navigate(1));
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('active')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') navigate(-1);
+                if (e.key === 'ArrowRight') navigate(1);
+            });
+        });
+    </script>
+</body>
+
+</html>

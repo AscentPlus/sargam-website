@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate — Sargam Foundation</title>
+    <meta name="description"
+        content="Support Sargam Foundation's mission. Your donation helps provide education, healthcare, and community support to underprivileged families in Alappuzha, Kerala.">
+    <meta name="keywords"
+        content="Donate to Sargam Foundation, charity donation Kerala, support social causes Alappuzha">
+
+    <script>window.location.href="index.html";</script>
+    <link rel="icon" type="image/jpeg" href="assets/images/Logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/donate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7S0TW0N5RV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7S0TW0N5RV');
+    </script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/Logo.png" alt="Sargam Charitable Foundation Logo" style="height: 44px; width: auto; object-fit: contain; border-radius: 4px;">
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <span class="logo-text" style="line-height: 1; margin-bottom: 2px;">SARGAM</span>
+                    <span class="logo-text" style="font-size: 0.65rem; font-weight: 500; letter-spacing: 0.05em; color: var(--plum-light);">CHARITABLE FOUNDATION</span>
+                </div>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#events">Programs</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="donate.html" class="active">Donate</a>
+                <a href="index.html#team">Contact</a>
+                <!-- <div class="nav-donate">
+                    <a href="donate.html" class="btn btn-primary btn-sm">Donate Now ❤️</a>
+                </div> -->
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- <main>
+        Hero
+        <section class="donate-hero">
+            <div class="container">
+                <span class="badge badge-rose"> Make a Difference</span>
+                <h1>Your Generosity<br>Changes Lives</h1>
+                <p>Every contribution, no matter how small, brings hope to families in need. Together, we're building a
+                    compassionate community where no one is left behind.</p>
+            </div>
+        </section>
+
+        Impact Tiers
+        <section class="donate-tiers">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Choose Your Impact</h2>
+                    <p>See how your donation can transform lives in our community.</p>
+                </div>
+
+                <div class="tiers-grid">
+                    <div class="tier-card reveal">
+                        <div class="tier-icon">📚</div>
+                        <div class="tier-amount">₹500</div>
+                        <h3>Education Supporter</h3>
+                        <p>Provide educational materials, notebooks, and stationery for underprivileged students for an
+                            entire school term.</p>
+                        <ul class="tier-features">
+                            <li><i class="fas fa-check"></i> School supplies for 1 student</li>
+                            <li><i class="fas fa-check"></i> Textbooks and notebooks</li>
+                            <li><i class="fas fa-check"></i> Certificate of appreciation</li>
+                        </ul>
+                        <button class="btn btn-secondary donate-btn" data-amount="500" id="donate500Btn">Donate
+                            ₹500</button>
+                    </div>
+
+                    <div class="tier-card tier-featured reveal">
+                        <div class="tier-popular">Most Popular</div>
+                        <div class="tier-icon">👨‍👩‍👧‍👦</div>
+                        <div class="tier-amount">₹1,000</div>
+                        <h3>Family Guardian</h3>
+                        <p>Support a family in need with essential groceries, medical aid, and monthly sustenance for
+                            better living conditions.</p>
+                        <ul class="tier-features">
+                            <li><i class="fas fa-check"></i> Monthly grocery kit</li>
+                            <li><i class="fas fa-check"></i> Medical assistance fund</li>
+                            <li><i class="fas fa-check"></i> Impact report delivered</li>
+                            <li><i class="fas fa-check"></i> Recognition on our website</li>
+                        </ul>
+                        <button class="btn btn-accent donate-btn" data-amount="1000" id="donate1000Btn">Donate
+                            ₹1,000</button>
+                    </div>
+
+                    <div class="tier-card reveal">
+                        <div class="tier-icon">🌟</div>
+                        <div class="tier-amount">₹5,000</div>
+                        <h3>Community Champion</h3>
+                        <p>Sponsor an entire community initiative — from health camps to education workshops — creating
+                            lasting impact.</p>
+                        <ul class="tier-features">
+                            <li><i class="fas fa-check"></i> Sponsor a community program</li>
+                            <li><i class="fas fa-check"></i> Personalized impact story</li>
+                            <li><i class="fas fa-check"></i> Annual report with photos</li>
+                            <li><i class="fas fa-check"></i> Special donor recognition</li>
+                        </ul>
+                        <button class="btn btn-secondary donate-btn" data-amount="5000" id="donate5000Btn">Donate
+                            ₹5,000</button>
+                    </div>
+                </div>
+
+                Custom Amount
+                <div class="custom-donate reveal">
+                    <div class="custom-donate-inner">
+                        <h3>Or Choose Your Own Amount</h3>
+                        <p>Every rupee counts. Enter any amount you'd like to contribute.</p>
+                        <div class="custom-amount-row">
+                            <div class="amount-input-wrap">
+                                <span class="currency">₹</span>
+                                <input type="number" id="customAmount" placeholder="Enter amount" min="1"
+                                    aria-label="Custom donation amount">
+                            </div>
+                            <button class="btn btn-primary" id="customDonateBtn">Donate Now</button>
+                        </div>
+                    </div>
+                </div>
+
+        Trust Section
+        <div class="donate-trust reveal">
+            <div class="trust-item">
+                <i class="fas fa-lock"></i>
+                <span>100% Secure</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-receipt"></i>
+                <span>Tax Deductible</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-eye"></i>
+                <span>Full Transparency</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-certificate"></i>
+                <span>Registered Charity</span>
+            </div>
+        </div>
+    </div>
+</section>
+</main> -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo" style="margin-bottom: 16px;">
+                        <img src="assets/images/Logo.png" alt="Sargam Charitable Foundation Logo" style="height: 44px; width: auto; object-fit: contain; border-radius: 4px;">
+                        <div style="display: flex; flex-direction: column; justify-content: center;">
+                            <span class="logo-text" style="color: var(--milk); line-height: 1; margin-bottom: 2px;">SARGAM</span>
+                            <span class="logo-text" style="color: rgba(255,255,255,0.8); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.05em;">CHARITABLE FOUNDATION</span>
+                        </div>
+                    </div>
+                    <p>A registered charitable organization committed to empowering underprivileged communities through
+                        education, healthcare, and sustainable social programs in Alappuzha, Kerala.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:sargamalpy@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+919447344356" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=9447344356&text=Hello,%20I%20want%20to%20know%20more%20about%20Sargam%20Foundation.%20Thanks." aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#home">Home</a>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#events">Programs</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="donate.html">Donate</a>
+                    <a href="index.html#team">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Our Programs</h4>
+                    <a href="index.html#program-medical">Medical Aid</a>
+                    <a href="index.html#program-elderly">Elderly Care</a>
+                    <a href="index.html#program-physical">Physical Wellness</a>
+                    <a href="index.html#program-mental">Mental Wellness</a>
+                </div>
+                <!-- <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p style="color: rgba(255,243,230,0.7); font-size: 0.9rem; margin-bottom: 16px;">Subscribe to our
+                        newsletter.</p>
+                    <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+                    <button class="btn btn-accent btn-sm"
+                        onclick="alert('Thank you for subscribing! 🎉')">Subscribe</button>
+                </div> -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sargam Foundation. All rights reserved. Designed by <a href="http://www.ascentplus.net"
+                        target="_blank">Ascent Plus</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Placeholder donate buttons
+            document.querySelectorAll('.donate-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const amount = btn.dataset.amount;
+                    alert(`Thank you for choosing to donate ₹${parseInt(amount).toLocaleString()}! 🙏\n\nRazorpay payment integration will be connected here soon.`);
+                });
+            });
+
+            document.getElementById('customDonateBtn').addEventListener('click', () => {
+                const amount = document.getElementById('customAmount').value;
+                if (!amount || amount < 1) {
+                    alert('Please enter a valid donation amount.');
+                    return;
+                }
+                alert(`Thank you for choosing to donate ₹${parseInt(amount).toLocaleString()}! 🙏\n\nRazorpay payment integration will be connected here soon.`);
+            });
+        });
+    </script>
+</body>
+
+</html>

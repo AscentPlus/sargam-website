@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sargam Charitable Foundation</title>
+  <meta name="description"
+    content="Sargam Charitable Foundation is a charitable organization in Alappuzha, Kerala dedicated to empowering lives through community support, education, health camps, and social welfare programs.">
+  <meta name="keywords"
+    content="Sargam Charitable Foundation, Charity in Alappuzha, Sargam, Community support organization, K. K. Padmanabha Pillai">
+  <meta name="author" content="Sargam Charitable Foundation">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sargam Charitable Foundation">
+  <meta property="og:description"
+    content="Empowering communities through education, healthcare, and social support in Alappuzha, Kerala.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero-banner.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/Logo.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7S0TW0N5RV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7S0TW0N5RV');
+  </script>
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/Logo.png" alt="Sargam Charitable Foundation Logo"
+          style="height: 44px; width: auto; object-fit: contain; border-radius: 4px;">
+        <div style="display: flex; flex-direction: column; justify-content: center;">
+          <span class="logo-text" style="line-height: 1; margin-bottom: 2px;">SARGAM</span>
+          <span class="logo-text"
+            style="font-size: 0.65rem; font-weight: 500; letter-spacing: 0.05em; color: var(--plum-light);">CHARITABLE
+            FOUNDATION</span>
+        </div>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#events">Programs</a>
+        <a href="gallery.html">Gallery</a>
+        <!-- <a href="donate.html">Donate</a> -->
+        <a href="index.html#team">Contact</a>
+        <!-- <div class="nav-donate">
+          <a href="donate.html" class="btn btn-primary btn-sm">Donate Now</a>
+        </div> -->
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <div class="hero-slideshow">
+          <img src="assets/images/hero-banner.png" alt="Community support" class="hero-slide active" loading="eager">
+          <img src="assets/images/hero-slide-1.png" alt="Food distribution" class="hero-slide" loading="lazy">
+          <img src="assets/images/hero-slide-2.png" alt="Medical camp" class="hero-slide" loading="lazy">
+          <img src="assets/images/hero-slide-3.png" alt="Elderly care" class="hero-slide" loading="lazy">
+          <img src="assets/images/hero-slide-4.png" alt="Mental wellness" class="hero-slide" loading="lazy">
+        </div>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container hero-content">
+        <!-- <span class="badge badge-warm hero-badge reveal">Making a Difference Since 2020</span> -->
+        <h1 class="reveal">Sargam Charitable Foundation<br><em>Healing Beyond Medicine</em></h1>
+        <p class="hero-sub reveal">"Caring beyond illness — supporting health, dignity, and compassion in every life."
+        </p>
+        <div class="hero-actions reveal">
+          <button onclick="openDonateQR()" class="btn btn-accent btn-lg">Donate Now</button>
+          <a href="#about" class="btn btn-secondary btn-lg">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-wave">
+        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,60 C360,100 720,0 1080,60 C1260,90 1380,70 1440,60 L1440,100 L0,100 Z" fill="#F8F9FA" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ========== IMPACT STATS ==========
+    <section class="stats" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card reveal">
+            <div class="stat-icon"><i class="fas fa-home"></i></div>
+            <h2 class="stat-number" data-count="1500" data-suffix="+">0</h2>
+            <p>Families Supported</p>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-icon"><i class="fas fa-hands-helping"></i></div>
+            <h2 class="stat-number" data-count="45" data-suffix="+">0</h2>
+            <p>Community Programs</p>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-icon"><i class="fas fa-users"></i></div>
+            <h2 class="stat-number" data-count="300" data-suffix="+">0</h2>
+            <p>Volunteers Involved</p>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-icon"><i class="fas fa-heart"></i></div>
+            <h2 class="stat-number" data-count="25000" data-suffix="+">0</h2>
+            <p>Lives Impacted</p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ========== ABOUT ========== -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>About Sargam Charitable Foundation</h2>
+          <!-- <p>Driven by compassion and committed to transparency, Sargam Charitable Foundation empowers communities across Kerala.</p> -->
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card reveal">
+            <div class="about-icon">💡</div>
+            <h3>Our Vision</h3>
+            <p>To evolve a holistic support system that goes beyond treating illness — one that actively nurtures
+              physical and mental wellness, upholds the dignity of the elderly, and builds inclusive community care for
+              every person who is ailing, vulnerable, or simply in need of a hand.</p>
+          </div>
+          <div class="about-card reveal">
+            <div class="about-icon">🎯</div>
+            <h3>Our Mission</h3>
+            <p>We bridge the gap between need and help by funding critical treatments, supporting family caregivers,
+              running preventive health programs, and making mental health conversations normal. Our work is grounded in
+              communities, guided by compassion, and measured by real lives changed.</p>
+          </div>
+        </div>
+
+        <!-- Managing Trustee Leadership -->
+        <div class="section-header mt-6 reveal">
+          <h2>Leadership</h2>
+          <!-- <p>Guided by experienced hands and deep-rooted community values.</p> -->
+        </div>
+
+        <div class="leadership-card reveal">
+          <div class="leadership-photo-wrap">
+            <div class="leadership-photo">
+              <img src="assets/images/managing-trustee.jpg" alt="Shri K. K. Padmanabha Pillai"
+                style="width:100%; height:100%; object-fit:cover; border-radius: var(--radius-md);"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="leadership-photo-placeholder" style="display:none;">
+                <i class="fas fa-user" style="font-size: 3.5rem; color: var(--plum-light); opacity:0.4;"></i>
+                <p style="font-size:0.8rem; color: var(--text-muted); margin-top:8px; max-width:none;">Managing Trustee
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="leadership-bio">
+            <span class="leadership-role">Managing Trustee</span>
+            <h3 class="leadership-name">Shri K. K. Padmanabha Pillai, FCA, LL.B.</h3>
+            <p>Shri K. K. Padmanabha Pillai (born 29th October 1945 at Karuvatta, Alappuzha District, Kerala) is a
+              distinguished Chartered Accountant, legal professional, author, and social leader whose career spans over
+              five decades of professional excellence and outstanding social service.</p>
+            <p style="margin-top:12px;">He graduated in Commerce (B.Com, University of Kerala), became a Fellow Member
+              of the Institute of Chartered Accountants of India (FCA), and later obtained his LL.B. from the University
+              of Lucknow. He established the Chartered Accountancy firm M/s K. K. Padmanabha Pillai & Co. at Alappuzha,
+              and has been in active practice for more than 57 years.</p>
+            <div class="leadership-highlights">
+              <div class="leadership-col">
+                <h5><i class="fas fa-building" style="color:var(--accent-warm);"></i> Community Initiatives</h5>
+                <ul>
+                  <li>Keraleeya Kalakshetram</li>
+                  <li>Swathi Thirunal Sangeethotsavam</li>
+                  <li>Sargam</li>
+                  <li>Sargam Charitable Foundation</li>
+                  <li>K. K. Nair Charitable Trust</li>
+                </ul>
+              </div>
+              <div class="leadership-col">
+                <h5><i class="fas fa-medal" style="color:var(--accent-warm);"></i> Leadership Roles</h5>
+                <ul>
+                  <li>Director Board Member – Nair Service Society</li>
+                  <li>District President – Lions Clubs International</li>
+                  <li>President – ICAI Alappuzha Branch</li>
+                  <li>President – Ambalapuzha Taluk NSS Union</li>
+                  <li>President – Thiruvampadi Higher Secondary School Trust</li>
+                </ul>
+              </div>
+            </div>
+            <p
+              style="margin-top:16px; font-style:italic; color:var(--text-secondary); border-left: 3px solid var(--accent-warm); padding-left:14px;">
+              As Managing Trustee of Sargam Charitable Foundation, he guides the organization with a vision to nurture
+              cultural excellence, encourage artistic expression, and support meaningful charitable initiatives.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== FEATURED ACTIVITIES ========== -->
+    <section class="activities bg-milk-dark" id="activities">
+      <div class="container">
+        <!-- ========== PROGRAMS ========== -->
+        <section class="activities bg-milk-dark" id="events">
+          <div class="container">
+            <div class="section-header reveal">
+              <h2>Our Programs</h2>
+              <p>Four pillars of community care — each designed to touch lives where it matters most.</p>
+            </div>
+
+            <!-- Program 01: Medical Aid -->
+            <div class="program-card reveal" id="program-medical">
+              <div class="program-header">
+                <div class="program-num">01</div>
+                <div>
+                  <span class="program-label">Medical Aid</span>
+                  <h3>Where Life-Saving Treatment Shouldn't Depend on Your Bank Balance</h3>
+                </div>
+              </div>
+              <p>For families caught in the relentless cycle of chronic illness, the financial burden is often as
+                devastating as the disease itself. Our Medical Aid program steps in to bridge that gap — ensuring that
+                dialysis sessions continue, chemotherapy courses are completed and no one goes without care simply
+                because they cannot pay.</p>
+              <div class="program-grid">
+                <div class="program-col">
+                  <h5>🏥 Services</h5>
+                  <ul>
+                    <li><strong>Renal Care</strong> — Long-term financial support for patients requiring regular
+                      dialysis.</li>
+                    <li><strong>Oncology</strong> — Covering chemotherapy and radiation costs for cancer patients.</li>
+                    <li><strong>Mobility Support</strong> — Assistive equipment and financial aid for the physically
+                      handicapped and accident victims.</li>
+                  </ul>
+                </div>
+                <div class="program-col">
+                  <h5>⚙️ How We Operate</h5>
+                  <ul>
+                    <li><strong>Hospital Partnerships</strong> — Tie-ups with government hospitals and charitable
+                      clinics for vetted patient referrals.</li>
+                    <li><strong>Direct-to-Hospital Payments</strong> — We pay service providers directly, bypassing the
+                      risk of fund misuse.</li>
+                    <li><strong>Verification Committee</strong> — A dedicated review body assessing applicants'
+                      financial status.</li>
+                    <li><strong>Medical Equipment Bank</strong> — Lending wheelchairs, oxygen concentrators and hospital
+                      beds for home-based care.</li>
+                    <li><strong>Consumables Drive</strong> — Monthly distribution of high-cost medical disposables.</li>
+                  </ul>
+                </div>
+              </div>
+              <blockquote class="program-quote">"No one should have to choose between treatment and survival."
+              </blockquote>
+            </div>
+
+            <!-- Program 02: Elderly Care -->
+            <div class="program-card reveal" id="program-elderly">
+              <div class="program-header">
+                <div class="program-num">02</div>
+                <div>
+                  <span class="program-label">Elderly Care</span>
+                  <h3>Because Growing Older Should Mean Being Cared For, Not Forgotten</h3>
+                </div>
+              </div>
+              <p>Our Elderly Care program extends beyond medical support. It's about restoring dignity, independence and
+                joy in the lives of senior citizens. We empower families with limited resources to care for their elders
+                with compassion, equip communities with the means to support their elders and ensure that every elderly
+                individual feels seen, valued and included.</p>
+              <div class="program-grid">
+                <div class="program-col">
+                  <h5>🎯 Focus Areas</h5>
+                  <ul>
+                    <li><strong>Nutrition</strong> — Monthly ration kits and supplements for the feeble and homebound
+                      elderly.</li>
+                    <li><strong>Hygiene &amp; Dignity</strong> — Adult care essentials to maintain cleanliness,
+                      comfort and self-respect.</li>
+                    <li><strong>Caregiver Support</strong> — Training, guidance and financial relief for family
+                      caregivers.</li>
+                    <li><strong>Social Inclusion</strong> — Events and campaigns to reduce isolation and foster
+                      community connection.</li>
+                  </ul>
+                </div>
+                <div class="program-col">
+                  <h5>⚙️ How We Operate</h5>
+                  <ul>
+                    <li><strong>Silver Support Kits</strong> — Monthly care packages for elderly citizens.</li>
+                    <li><strong>Caregiver Skills Training</strong> — Workshops including bed patient care and bedsore
+                      prevention.</li>
+                    <li><strong>Respite Grants</strong> — Financial support for family members who care for bedridden
+                      elders.</li>
+                    <li><strong>Home Care Guide</strong> — Step-by-step guidance materials for elder care at home.</li>
+                    <li><strong>Community Events</strong> — Social gatherings and engaging programs for senior
+                      citizens.</li>
+                    <li><strong>Youth Awareness Drives</strong> — Campaigns encouraging younger generations to care for
+                      elders.</li>
+                  </ul>
+                </div>
+              </div>
+              <blockquote class="program-quote">"Every elder deserves to age with grace and dignity."</blockquote>
+            </div>
+
+            <!-- Program 03: Physical Wellness -->
+            <div class="program-card reveal" id="program-physical">
+              <div class="program-header">
+                <div class="program-num">03</div>
+                <div>
+                  <span class="program-label">Physical Wellness</span>
+                  <h3>Shifting the Conversation from Cure to Prevention</h3>
+                </div>
+              </div>
+              <p>The best healthcare is the kind you never need. Our Physical Wellness program brings preventive health
+                education directly into communities equipping people with the knowledge, screenings, and habits to stay
+                ahead of lifestyle diseases before they take hold.</p>
+              <div class="program-grid">
+                <div class="program-col">
+                  <h5>🎯 Focus Areas</h5>
+                  <ul>
+                    <li><strong>Metabolic Health</strong> — Diabetes and NAFLD awareness.</li>
+                    <li><strong>Cardiovascular Health</strong> — Hypertension and cholesterol management.</li>
+                    <li><strong>Dietary Reform</strong> — Promoting healthier food habits.</li>
+                  </ul>
+                </div>
+                <div class="program-col">
+                  <h5>⚙️ Activities</h5>
+                  <ul>
+                    <li><strong>'Know Your Numbers' Camps</strong> — Community health camps with BP, sugar, and BMI
+                      checks.</li>
+                    <li><strong>'Eat Right' Workshops</strong> — Live healthy cooking demonstrations.</li>
+                    <li><strong>Digital Health Series</strong> — Weekly social media awareness campaigns.</li>
+                    <li><strong>Health Literacy Materials</strong> — Educational materials on lifestyle diseases.</li>
+                  </ul>
+                </div>
+              </div>
+              <blockquote class="program-quote">"Prevention is not a luxury. It is the most powerful medicine."
+              </blockquote>
+            </div>
+
+            <!-- Program 04: Mental Wellness -->
+            <div class="program-card reveal" id="program-mental">
+              <div class="program-header">
+                <div class="program-num">04</div>
+                <div>
+                  <span class="program-label">Mental Wellness</span>
+                  <h3>Making It Safe to Ask for Help</h3>
+                </div>
+              </div>
+              <p>Mental health struggles don't announce themselves and for too many, silence feels like the only option.
+                Our Mental Wellness program works to change that, creating spaces where students can breathe,
+                professionals can seek balance and families can have honest conversations about emotional well-being.
+              </p>
+              <div class="program-grid">
+                <div class="program-col">
+                  <h5>👥 Focus Groups</h5>
+                  <ul>
+                    <li><strong>Students</strong> — Stress, anxiety, and academic pressure.</li>
+                    <li><strong>Working Professionals</strong> — Burnout, work-life balance and workplace stress.</li>
+                    <li><strong>Families</strong> — Parenting stress, relationship dynamics and emotional well-being.
+                    </li>
+                  </ul>
+                </div>
+                <div class="program-col">
+                  <h5>⚙️ Activities</h5>
+                  <ul>
+                    <li><strong>School &amp; College Sessions</strong> — Stress management sessions for students.</li>
+                    <li><strong>Workplace Wellness Talks</strong> — Sessions on burnout and maintaining work-life
+                      balance.</li>
+                    <li><strong>Mental Health Content</strong> — Short contents and explainer videos on mental health in
+                      simple language.</li>
+                    <li><strong>Helpline Coordination</strong> — Connecting individuals with crisis helplines to offer
+                      safe, anonymous access to immediate professional support.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <blockquote class="program-quote">"You don't have to be in crisis to deserve support."</blockquote>
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- ========== GALLERY PREVIEW ========== -->
+        <section class="gallery-preview bg-milk-dark" id="gallery">
+          <div class="container">
+            <div class="section-header reveal">
+              <!-- <span class="badge badge-rose">📸 Our Moments</span> -->
+              <h2>Photo Highlights</h2>
+              <p>Capturing the spirit of community service and the smiles we create together.</p>
+            </div>
+
+            <div class="gallery-grid" id="galleryPreviewGrid">
+              <!-- Populated by JS: 6 photos -->
+            </div>
+
+            <div class="text-center mt-4 reveal">
+              <a href="gallery.html" class="btn btn-primary">View More Images</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== OUR TEAM ========== -->
+        <section class="testimonials" id="team">
+          <div class="container">
+            <div class="section-header reveal">
+              <h2>Our Team</h2>
+              <p>The dedicated leaders driving Sargam Charitable Foundation's mission forward.</p>
+            </div>
+
+            <div class="team-grid">
+              <!-- Managing Trustee -->
+              <div class="team-card team-card--featured reveal">
+                <div class="team-avatar">
+                   <img src="assets/images/managing-trustee.jpg" alt="Member Name">
+                </div>
+                <span class="team-role">Managing Trustee</span>
+                <h4>K.K. Padmanabha Pillai</h4>
+                <a href="tel:" class="team-phone"><i class="fas fa-phone-alt"></i> <span>9447344356</span></a>
+              </div>
+
+              <!-- President -->
+              <div class="team-card reveal">
+                <div class="team-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <span class="team-role">President</span>
+                <h4>Anilkumar P</h4>
+                <a href="tel:" class="team-phone"><i class="fas fa-phone-alt"></i> <span>9446088188</span></a>
+              </div>
+
+              <!-- Vice Presidents -->
+              <div class="team-card reveal">
+                <div class="team-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <span class="team-role">Vice President</span>
+                <h4>Rajesh Pillai</h4>
+                <a href="tel:" class="team-phone"><i class="fas fa-phone-alt"></i> <span>9447596837</span></a>
+              </div>
+              <div class="team-card reveal">
+                <div class="team-avatar">
+                  <img src="assets/images/vice_president_2.jpeg" alt="Member Name">
+                </div>
+                <span class="team-role">Vice President</span>
+                <h4>Vishnu Venugopal</h4>
+                <a href="tel:" class="team-phone"><i class="fas fa-phone-alt"></i> <span>9496331090</span></a>
+              </div>
+
+              <!-- Secretary -->
+              <div class="team-card reveal">
+                <div class="team-avatar">
+                  <img src="assets/images/secretary.jpeg" alt="Member Name">
+                </div>
+                <span class="team-role">Secretary</span>
+                <h4>Anil Kumar P</h4>
+                <a href="tel:" class="team-phone"><i class="fas fa-phone-alt"></i> <span>9447596946</span></a>
+              </div>
+
+              <!-- Joint Secretaries -->
+              <div class="team-card reveal">
+                <div class="team-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <span class="team-role">Joint Secretary</span>
+                <h4>Balan C Nair</h4>
+                <a href="tel:" class="team-phone"><i class="fas fa-phone-alt"></i> <span>9846560704</span></a>
+              </div>
+              <div class="team-card reveal">
+                <div class="team-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <span class="team-role">Joint Secretary</span>
+                <h4>K Omanakuttan</h4>
+                <a href="tel:" class="team-phone"><i class="fas fa-phone-alt"></i> <span>9037774197</span></a>
+              </div>
+
+              <!-- Treasurer -->
+              <div class="team-card reveal">
+                <div class="team-avatar">
+                  <img src="assets/images/treasurer.jpeg" alt="Member Name">
+                </div>
+                <span class="team-role">Treasurer</span>
+                <h4>Madhusoodanan Pillai</h4>
+                <a href="tel:" class="team-phone"><i class="fas fa-phone-alt"></i> <span>9400051609</span></a>
+              </div>
+
+              <!-- Joint Treasurer -->
+              <div class="team-card reveal">
+                <div class="team-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <span class="team-role">Joint Treasurer</span>
+                <h4>Nadamoni N</h4>
+                <a href="tel:" class="team-phone"><i class="fas fa-phone-alt"></i> <span>9446569170</span></a>
+              </div>
+
+              <!-- Committee Members -->
+              <div class="team-card reveal">
+                <div class="team-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <span class="team-role">Committee Member</span>
+                <h4>Gopinathan P.G</h4>
+                <a href="tel:" class="team-phone"><i class="fas fa-phone-alt"></i> <span>9446512532</span></a>
+              </div>
+              <div class="team-card reveal">
+                <div class="team-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <span class="team-role">Committee Member</span>
+                <h4>Narayanan Nair A</h4>
+                <a href="tel:" class="team-phone"><i class="fas fa-phone-alt"></i> <span>9496274884</span></a>
+              </div>
+              <div class="team-card reveal">
+                <div class="team-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <span class="team-role">Committee Member</span>
+                <h4>P.K. Harikumar</h4>
+                <a href="tel:" class="team-phone"><i class="fas fa-phone-alt"></i> <span>9846252227</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ========== CONTACT ========== -->
+        <section class="contact bg-milk-dark" id="contact">
+          <div class="container">
+            <div class="section-header reveal">
+              <!-- <span class="badge badge-warm">📬 Get in Touch</span> -->
+              <h2>Contact Us</h2>
+              <p>We'd love to hear from you. Reach out for queries, collaborations, or to volunteer.</p>
+            </div>
+
+            <div class="contact-grid">
+              <form class="contact-form reveal-left" id="contactForm">
+                <input type="hidden" name="access_key" value="04848269-7b27-4807-a6e3-b15fd58caeed"> <!-- Change this access key from Web3Forms. -->
+                <input type="hidden" name="subject" value="New Form Submission - Sargam Foundation">
+                <input type="hidden" name="from_name" value="Sargam Website">
+                <div class="form-group">
+                  <label for="contactName">Full Name</label>
+                  <input type="text" id="contactName" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail">Email Address</label>
+                  <input type="email" id="contactEmail" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                  <label for="contactPhone">Phone Number</label>
+                  <input type="tel" id="contactPhone" name="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                  <label for="contactMessage">Message</label>
+                  <textarea id="contactMessage" name="message" rows="5" placeholder="Write your message..."
+                    required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="contactSubmitBtn">Send Message <i
+                    class="fas fa-paper-plane"></i></button>
+              </form>
+
+              <div class="contact-info reveal-right">
+                <div class="contact-info-card">
+                  <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                  <div>
+                    <h4>Our Address</h4>
+                    <p>Pranavam<br>Chandanakavu<br>Alappuzha - 688011</p>
+                  </div>
+                </div>
+                <div class="contact-info-card">
+                  <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                  <div>
+                    <h4>Phone</h4>
+                    <p>+91 9447344356</p>
+                  </div>
+                </div>
+                <div class="contact-info-card">
+                  <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                  <div>
+                    <h4>Email</h4>
+                    <p>sargamalpy@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="contact-map">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2952.051964529828!2d76.34058372656565!3d9.48609457848675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b088517aa3c1aaf%3A0x53ad811facdfc6a9!2sK%20K%20Padmanabha%20Pillai%20and%20Co!5e1!3m2!1sen!2sin!4v1773489285944!5m2!1sen!2sin"
+                    width="100%" height="220" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Sargam Foundation location on Google Maps"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== CALL TO DONATE ========== -->
+        <section class="cta-donate" id="cta-donate">
+          <div class="container">
+            <div class="cta-content reveal">
+              <h2>Together, We Can Make a Difference</h2>
+              <p>Your contribution, big or small, transforms lives. Support Sargam Foundation and be a part of
+                meaningful
+                change in our communities.</p>
+              <div class="cta-actions">
+                <button onclick="openDonateQR()" class="btn btn-accent btn-lg">Donate Now</button>
+                <a href="#contact" class="btn btn-secondary btn-lg" style="border-color: white; color: white;">Volunteer
+                  With Us</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== BLOG / NEWS PLACEHOLDER ========== -->
+        <section class="blog-preview" id="blog">
+          <div class="container">
+            <div class="section-header reveal">
+              <!-- <span class="badge badge-warm">📰 Latest Updates</span> -->
+              <h2>News & Stories</h2>
+              <p>Stay informed about our recent activities and community impact stories.</p>
+            </div>
+
+            <div class="blog-grid">
+              <article class="blog-card reveal">
+                <div class="blog-date">Mar 2026</div>
+                <h3>Events in March 2026</h3>
+                <p>Give details of events in March 2026.</p>
+                <!-- <span class="blog-tag">Healthcare</span> -->
+              </article>
+              <article class="blog-card reveal">
+                <div class="blog-date">Feb 2026</div>
+                <h3>Events in February 2026</h3>
+                <p>Give details of events in February 2026.</p>
+                <!-- <span class="blog-tag">Education</span> -->
+              </article>
+              <article class="blog-card reveal">
+                <div class="blog-date">Jan 2026</div>
+                <h3>Events in January 2026</h3>
+                <p>Give details of events in January 2026.</p>
+                <!-- <span class="blog-tag">Community</span> -->
+              </article>
+            </div>
+          </div>
+        </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="logo" style="margin-bottom: 16px;">
+            <img src="assets/images/Logo.png" alt="Sargam Charitable Foundation Logo"
+              style="height: 44px; width: auto; object-fit: contain; border-radius: 4px;">
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+              <span class="logo-text" style="color: var(--milk); line-height: 1; margin-bottom: 2px;">SARGAM</span>
+              <span class="logo-text"
+                style="color: rgba(255,255,255,0.8); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.05em;">CHARITABLE
+                FOUNDATION</span>
+            </div>
+          </div>
+          <p>A registered charitable organization committed to empowering underprivileged communities through education,
+            healthcare, and sustainable social programs in Alappuzha, Kerala.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:sargamalpy@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+919447344356" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=9447344356&text=Hello,%20I%20want%20to%20know%20more%20about%20Sargam%20Foundation.%20Thanks." aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="index.html#home">Home</a>
+          <a href="index.html#about">About Us</a>
+          <a href="index.html#events">Programs</a>
+          <a href="gallery.html">Gallery</a>
+          <!-- <a href="donate.html">Donate</a> -->
+          <a href="index.html#team">Contact</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>Our Programs</h4>
+          <a href="index.html#program-medical">Medical Aid</a>
+          <a href="index.html#program-elderly">Elderly Care</a>
+          <a href="index.html#program-physical">Physical Wellness</a>
+          <a href="index.html#program-mental">Mental Wellness</a>
+        </div>
+
+        <!-- <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p style="color: rgba(255,243,230,0.7); font-size: 0.9rem; margin-bottom: 16px;">Subscribe to our newsletter
+            for the latest updates and impact stories.</p>
+          <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+          <button class="btn btn-accent btn-sm" onclick="alert('Thank you for subscribing! 🎉')">Subscribe</button>
+        </div> -->
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sargam Foundation. All rights reserved. Designed by <a href="http://www.ascentplus.net"
+            target="_blank">Ascent Plus</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Donate Button -->
+  <div class="floating-donate">
+    <button onclick="openDonateQR()" class="btn btn-primary">Donate Now</button>
+  </div>
+
+  <!-- Donate QR Modal -->
+  <div class="donate-qr-modal" id="donateQrModal">
+    <div class="donate-qr-content">
+      <button class="donate-qr-close" id="donateQrClose" aria-label="Close modal">&times;</button>
+      <h3>Support Our Cause</h3>
+      <p>Scan the QR code below to make a donation and help us empower the community.</p>
+      <img src="assets/images/QR.jpg" alt="Donation QR Code">
+      <p class="donate-qr-note">Every contribution, big or small, makes a difference.</p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Populate programs gallery preview
+      const ongoingGrid = document.getElementById('ongoingEventsGrid');
+      const upcomingGrid = document.getElementById('upcomingEventsGrid');
+      const pastGrid = document.getElementById('pastEventsGrid');
+
+      if (ongoingGrid) {
+        const ongoing = DataStore.getOngoing();
+        const ongoingHeader = document.getElementById('ongoingEventsHeader');
+        if (ongoing.length > 0) {
+          ongoingGrid.innerHTML = ongoing.slice(0, 3).map(createEventCard).join('');
+          if (ongoingHeader) ongoingHeader.style.display = 'block';
+        } else {
+          ongoingGrid.style.display = 'none';
+          if (ongoingHeader) ongoingHeader.style.display = 'none';
+        }
+      }
+
+      if (upcomingGrid) {
+        const upcoming = DataStore.getUpcoming();
+        upcomingGrid.innerHTML = upcoming.slice(0, 3).map(createEventCard).join('');
+      }
+
+      if (pastGrid) {
+        const past = DataStore.getPast();
+        pastGrid.innerHTML = past.slice(0, 3).map(createEventCard).join('');
+      }
+
+      // Populate gallery preview
+      const galleryGrid = document.getElementById('galleryPreviewGrid');
+      if (galleryGrid) {
+        const photos = DataStore.getGallery();
+        galleryGrid.innerHTML = photos.slice(0, 6).map(photo => `
+          <div class="gallery-item reveal">
+            <img src="${photo.url}" alt="${photo.caption}" loading="lazy">
+            <div class="gallery-overlay">
+              <span>${photo.caption}</span>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Counter animation
+      const statsSection = document.getElementById('stats');
+      if (statsSection) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateCounters();
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.3 });
+        observer.observe(statsSection);
+      }
+
+      // Re-init scroll reveal for dynamically added content
+      setTimeout(() => initScrollReveal(), 100);
+
+      // Contact form
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          const btn = document.getElementById('contactSubmitBtn');
+          const originalText = btn.innerHTML;
+          btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+          btn.disabled = true;
+
+          const formData = new FormData(contactForm);
+          const object = Object.fromEntries(formData);
+          const json = JSON.stringify(object);
+
+          try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: json
+            });
+
+            const result = await response.json();
+
+            if (response.status === 200) {
+              // Success UI
+              btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+              btn.style.background = 'var(--accent-green)';
+
+              // Optional: Save to local DataStore as backup
+              DataStore.addMessage({
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                message: formData.get('message')
+              });
+
+              setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+                btn.disabled = false;
+                contactForm.reset();
+              }, 3000);
+            } else {
+              console.log(result);
+              btn.innerHTML = '<i class="fas fa-times"></i> Error! Try again.';
+              btn.style.background = '#dc3545';
+              setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+                btn.disabled = false;
+              }, 3000);
+            }
+          } catch (error) {
+            console.log(error);
+            btn.innerHTML = 'Something went wrong!';
+            setTimeout(() => {
+              btn.innerHTML = originalText;
+              btn.disabled = false;
+            }, 3000);
+          }
+        });
+      }
+    });
+  </script>
+  <script>
+    // Hero slideshow
+    (function () {
+      const slides = document.querySelectorAll('.hero-slide');
+      if (slides.length < 2) return;
+      let current = 0;
+      setInterval(() => {
+        const prev = current;
+        current = (current + 1) % slides.length;
+        slides[prev].classList.add('out');
+        slides[prev].classList.remove('active');
+        slides[current].classList.add('active');
+        setTimeout(() => slides[prev].classList.remove('out'), 1200);
+      }, 5000);
+    })();
+  </script>
+</body>
+
+</html>
