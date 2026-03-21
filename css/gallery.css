@@ -32,7 +32,8 @@
 
 .gallery-masonry {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: dense;
     gap: 16px;
 }
 
@@ -40,14 +41,21 @@
     position: relative;
     border-radius: var(--radius-md);
     overflow: hidden;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;
     cursor: pointer;
 }
 
-.gallery-masonry .gallery-item:nth-child(5n+1) {
+/* Instagram Explore Layout Pattern */
+/* Large square on the right */
+.gallery-masonry .gallery-item:nth-child(10n + 2) {
     grid-column: span 2;
     grid-row: span 2;
-    aspect-ratio: 1;
+}
+
+/* Large square on the left */
+.gallery-masonry .gallery-item:nth-child(10n + 9) {
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
 .gallery-masonry .gallery-item img {
@@ -162,10 +170,17 @@
         gap: 8px;
     }
 
-    .gallery-masonry .gallery-item:nth-child(5n+1) {
+    /* Reset desktop pattern */
+    .gallery-masonry .gallery-item:nth-child(10n + 2),
+    .gallery-masonry .gallery-item:nth-child(10n + 9) {
         grid-column: span 1;
         grid-row: span 1;
-        aspect-ratio: 4 / 3;
+    }
+
+    /* Smaller pattern for mobile */
+    .gallery-masonry .gallery-item:nth-child(5n + 1) {
+        grid-column: span 2;
+        grid-row: span 2;
     }
 
     .lightbox-prev,

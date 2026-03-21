@@ -16,7 +16,7 @@
   <meta property="og:description"
     content="Empowering communities through education, healthcare, and social support in Alappuzha, Kerala.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://sargamfoundation.org.in/assets/images/hero-banner.png">
+  <meta property="og:image" content="https://sargamfoundation.org.in/assets/images/hero-banner.jpeg">
   <meta property="og:url" content="https://sargamfoundation.org.in/index.html">
 
   <!-- Twitter Card -->
@@ -24,7 +24,7 @@
   <meta name="twitter:title" content="Sargam Charitable Foundation — Empowering Lives in Alappuzha">
   <meta name="twitter:description"
     content="Empowering communities through education, healthcare, and social support in Alappuzha, Kerala.">
-  <meta name="twitter:image" content="https://sargamfoundation.org.in/assets/images/hero-banner.png">
+  <meta name="twitter:image" content="https://sargamfoundation.org.in/assets/images/hero-banner.jpeg">
 
   <!-- Canonical Tag -->
   <link rel="canonical" href="https://sargamfoundation.org.in/index.html">
@@ -108,11 +108,11 @@
     <section class="hero" id="home">
       <div class="hero-bg">
         <div class="hero-slideshow">
-          <img src="assets/images/hero-banner.png" alt="Community support" class="hero-slide active" loading="eager">
-          <img src="assets/images/hero-slide-1.png" alt="Food distribution" class="hero-slide" loading="lazy">
-          <img src="assets/images/hero-slide-2.png" alt="Medical camp" class="hero-slide" loading="lazy">
-          <img src="assets/images/hero-slide-3.png" alt="Elderly care" class="hero-slide" loading="lazy">
-          <img src="assets/images/hero-slide-4.png" alt="Mental wellness" class="hero-slide" loading="lazy">
+          <img src="assets/images/hero-banner.jpeg" alt="Community support" class="hero-slide active" loading="eager">
+          <img src="assets/images/hero-slide-1.jpeg" alt="Food distribution" class="hero-slide" loading="lazy">
+          <img src="assets/images/hero-slide-2.jpeg" alt="Medical camp" class="hero-slide" loading="lazy">
+          <img src="assets/images/hero-slide-3.jpeg" alt="Elderly care" class="hero-slide" loading="lazy">
+          <img src="assets/images/hero-slide-4.jpeg" alt="Mental wellness" class="hero-slide" loading="lazy">
         </div>
         <div class="hero-overlay"></div>
       </div>
@@ -804,12 +804,11 @@
       const galleryGrid = document.getElementById('galleryPreviewGrid');
       if (galleryGrid) {
         const photos = DataStore.getGallery();
-        galleryGrid.innerHTML = photos.slice(0, 6).map(photo => `
+        // Shuffle the array to pick random images each load
+        const shuffledPhotos = [...photos].sort(() => 0.5 - Math.random());
+        galleryGrid.innerHTML = shuffledPhotos.slice(0, 6).map(photo => `
           <div class="gallery-item reveal">
             <img src="${photo.url}" alt="${photo.caption}" loading="lazy">
-            <div class="gallery-overlay">
-              <span>${photo.caption}</span>
-            </div>
           </div>
         `).join('');
       }
