@@ -12,6 +12,10 @@
     padding-top: var(--header-height);
 }
 
+.ticker-wrap + .hero {
+    padding-top: calc(var(--header-height) + 40px);
+}
+
 .hero-bg {
     position: absolute;
     inset: 0;
