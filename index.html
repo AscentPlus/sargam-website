@@ -71,11 +71,7 @@
         <a href="index.html#about">About Us</a>
         <a href="index.html#events">Programs</a>
         <a href="gallery.html">Gallery</a>
-        <!-- <a href="donate.html">Donate</a> -->
         <a href="index.html#team">Contact</a>
-        <!-- <div class="nav-donate">
-          <a href="donate.html" class="btn btn-primary btn-sm">Donate Now</a>
-        </div> -->
       </nav>
 
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
@@ -117,7 +113,6 @@
         <div class="hero-overlay"></div>
       </div>
       <div class="container hero-content">
-        <!-- <span class="badge badge-warm hero-badge reveal">Making a Difference Since 2020</span> -->
         <h1 class="reveal">Sargam Charitable Foundation<br><em>Healing Beyond Medicine</em></h1>
         <p class="hero-sub reveal">"Caring beyond illness — supporting health, dignity, and compassion in every life."
         </p>
@@ -133,40 +128,11 @@
       </div>
     </section>
 
-    <!-- ========== IMPACT STATS ==========
-    <section class="stats" id="stats">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-card reveal">
-            <div class="stat-icon"><i class="fas fa-home"></i></div>
-            <h2 class="stat-number" data-count="1500" data-suffix="+">0</h2>
-            <p>Families Supported</p>
-          </div>
-          <div class="stat-card reveal">
-            <div class="stat-icon"><i class="fas fa-hands-helping"></i></div>
-            <h2 class="stat-number" data-count="45" data-suffix="+">0</h2>
-            <p>Community Programs</p>
-          </div>
-          <div class="stat-card reveal">
-            <div class="stat-icon"><i class="fas fa-users"></i></div>
-            <h2 class="stat-number" data-count="300" data-suffix="+">0</h2>
-            <p>Volunteers Involved</p>
-          </div>
-          <div class="stat-card reveal">
-            <div class="stat-icon"><i class="fas fa-heart"></i></div>
-            <h2 class="stat-number" data-count="25000" data-suffix="+">0</h2>
-            <p>Lives Impacted</p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
     <!-- ========== ABOUT ========== -->
     <section class="about" id="about">
       <div class="container">
         <div class="section-header reveal">
           <h2>About Sargam Charitable Foundation</h2>
-          <!-- <p>Driven by compassion and committed to transparency, Sargam Charitable Foundation empowers communities across Kerala.</p> -->
         </div>
 
         <div class="about-grid">
@@ -189,7 +155,6 @@
         <!-- Managing Trustee Leadership -->
         <div class="section-header mt-6 reveal">
           <h2>Leadership</h2>
-          <!-- <p>Guided by experienced hands and deep-rooted community values.</p> -->
         </div>
 
         <div class="leadership-card reveal">
@@ -431,7 +396,6 @@
         <section class="gallery-preview bg-milk-dark" id="gallery">
           <div class="container">
             <div class="section-header reveal">
-              <!-- <span class="badge badge-rose">📸 Our Moments</span> -->
               <h2>Photo Highlights</h2>
               <p>Capturing the spirit of community service and the smiles we create together.</p>
             </div>
@@ -575,7 +539,6 @@
         <section class="contact bg-milk-dark" id="contact">
           <div class="container">
             <div class="section-header reveal">
-              <!-- <span class="badge badge-warm">📬 Get in Touch</span> -->
               <h2>Contact Us</h2>
               <p>We'd love to hear from you. Reach out for queries, collaborations, or to volunteer.</p>
             </div>
@@ -662,7 +625,6 @@
         <section class="blog-preview" id="blog">
           <div class="container">
             <div class="section-header reveal">
-              <!-- <span class="badge badge-warm">📰 Latest Updates</span> -->
               <h2>News & Stories</h2>
               <p>Stay informed about our recent activities and community impact stories.</p>
             </div>
@@ -671,20 +633,17 @@
               <article class="blog-card reveal">
                 <div class="blog-date">Mar 2026</div>
                 <h3>Events in March 2026</h3>
-                <p>Give details of events in March 2026.</p>
-                <!-- <span class="blog-tag">Healthcare</span> -->
+                <p>To be updated soon.</p>
               </article>
               <article class="blog-card reveal">
                 <div class="blog-date">Feb 2026</div>
                 <h3>Events in February 2026</h3>
-                <p>Give details of events in February 2026.</p>
-                <!-- <span class="blog-tag">Education</span> -->
+                <p>To be updated soon.</p>
               </article>
               <article class="blog-card reveal">
                 <div class="blog-date">Jan 2026</div>
                 <h3>Events in January 2026</h3>
-                <p>Give details of events in January 2026.</p>
-                <!-- <span class="blog-tag">Community</span> -->
+                <p>To be updated soon.</p>
               </article>
             </div>
           </div>
@@ -724,7 +683,6 @@
           <a href="index.html#about">About Us</a>
           <a href="index.html#events">Programs</a>
           <a href="gallery.html">Gallery</a>
-          <!-- <a href="donate.html">Donate</a> -->
           <a href="index.html#team">Contact</a>
         </div>
 
@@ -736,13 +694,7 @@
           <a href="index.html#program-mental">Mental Wellness</a>
         </div>
 
-        <!-- <div class="footer-newsletter">
-          <h4>Stay Updated</h4>
-          <p style="color: rgba(255,243,230,0.7); font-size: 0.9rem; margin-bottom: 16px;">Subscribe to our newsletter
-            for the latest updates and impact stories.</p>
-          <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
-          <button class="btn btn-accent btn-sm" onclick="alert('Thank you for subscribing! 🎉')">Subscribe</button>
-        </div> -->
+
       </div>
 
       <div class="footer-bottom">
@@ -813,19 +765,7 @@
         `).join('');
       }
 
-      // Counter animation
-      const statsSection = document.getElementById('stats');
-      if (statsSection) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              animateCounters();
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.3 });
-        observer.observe(statsSection);
-      }
+
 
       // Re-init scroll reveal for dynamically added content
       setTimeout(() => initScrollReveal(), 100);

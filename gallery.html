@@ -112,12 +112,12 @@
 
     <!-- Lightbox Modal -->
     <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close modal">&times;</button>
         <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image"><i
                 class="fas fa-chevron-left"></i></button>
         <div class="lightbox-content">
             <img src="" alt="" id="lightboxImg">
             <p class="lightbox-caption" id="lightboxCaption"></p>
-            <button class="btn btn-danger mt-4" id="lightboxClose">CLOSE</button>
         </div>
         <button class="lightbox-next" id="lightboxNext" aria-label="Next image"><i
                 class="fas fa-chevron-right"></i></button>
@@ -202,9 +202,6 @@
             grid.innerHTML = photos.map((photo, i) => `
         <div class="gallery-item reveal" data-index="${i}">
           <img src="${photo.url}" alt="${photo.caption}" loading="lazy">
-          <div class="gallery-overlay">
-            <span>${photo.caption}</span>
-          </div>
         </div>
       `).join('');
 
@@ -256,6 +253,25 @@
                 if (e.key === 'ArrowLeft') navigate(-1);
                 if (e.key === 'ArrowRight') navigate(1);
             });
+
+            // Touch events for swiping
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            lightbox.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, {passive: true});
+
+            lightbox.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, {passive: true});
+
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                if (touchEndX < touchStartX - swipeThreshold) navigate(1);
+                if (touchEndX > touchStartX + swipeThreshold) navigate(-1);
+            }
         });
     </script>
 </body>

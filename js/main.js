@@ -153,27 +153,7 @@ function setActiveNav() {
     });
 }
 
-/* ---- Counter Animation ---- */
-function animateCounters() {
-    const counters = document.querySelectorAll('[data-count]');
-    counters.forEach(counter => {
-        const target = parseInt(counter.dataset.count, 10);
-        const suffix = counter.dataset.suffix || '';
-        const duration = 2000;
-        const start = performance.now();
 
-        function update(now) {
-            const elapsed = now - start;
-            const progress = Math.min(elapsed / duration, 1);
-            // Ease out cubic
-            const eased = 1 - Math.pow(1 - progress, 3);
-            counter.textContent = Math.floor(target * eased).toLocaleString() + suffix;
-            if (progress < 1) requestAnimationFrame(update);
-        }
-
-        requestAnimationFrame(update);
-    });
-}
 
 /* ---- Format Date ---- */
 function formatDate(dateStr) {

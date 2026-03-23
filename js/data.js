@@ -93,7 +93,7 @@ const DataStore = {
 
   /* ---- Helpers ---- */
   _get(key) {
-    const raw = localStorage.getItem('sargam_' + key);
+    const raw = localStorage.getItem('sargam_v2_' + key);
     if (raw) return JSON.parse(raw);
     // Seed defaults on first load
     this._set(key, this._defaults[key]);
@@ -101,7 +101,7 @@ const DataStore = {
   },
 
   _set(key, data) {
-    localStorage.setItem('sargam_' + key, JSON.stringify(data));
+    localStorage.setItem('sargam_v2_' + key, JSON.stringify(data));
   },
 
   _nextId(list) {
