@@ -5,11 +5,11 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding-top: var(--header-height);
+    padding-top: calc(var(--header-height) + env(safe-area-inset-top, 0px));
 }
 
 .ticker-wrap + .hero {
-    padding-top: calc(var(--header-height) + 40px);
+    padding-top: calc(var(--header-height) + env(safe-area-inset-top, 0px) + 40px);
 }
 
 .hero-bg {
@@ -200,19 +200,6 @@
 
 
 
-/* ---- Contact ---- */
-.contact {
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    width: 100vw;
-    padding-left: max(16px, calc(50vw - 50% + 16px));
-    padding-right: max(16px, calc(50vw - 50% + 16px));
-}
-
-.contact .container {
-    max-width: 100%;
-    padding: 0;
-}
 
 .contact-grid {
     display: grid;
@@ -311,9 +298,6 @@
     background: linear-gradient(135deg, var(--plum), var(--plum-light));
     padding: 60px 0;
     text-align: center;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    width: 100vw;
 }
 
 .cta-content h2 {
@@ -571,23 +555,20 @@
 }
 
 .program-label {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--accent-warm);
-    border: 1.5px solid var(--accent-warm);
-    border-radius: var(--radius-full);
-    padding: 2px 10px;
-    margin-bottom: 6px;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--plum);
+    margin-bottom: 4px;
+    font-family: var(--font-heading);
 }
 
 .program-header h3 {
-    font-size: 1.2rem;
-    color: var(--plum);
+    font-size: 1.05rem;
+    color: var(--accent-rose);
     margin: 0;
-    line-height: 1.35;
+    line-height: 1.5;
+    font-weight: 600;
 }
 
 .program-grid {
