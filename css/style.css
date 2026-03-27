@@ -42,6 +42,7 @@
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
   --header-height: 80px;
+  --ticker-height: 44px;
   --container-max: 1200px;
   --container-narrow: 900px;
 }
@@ -57,8 +58,9 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-height) + env(safe-area-inset-top, 0px));
+  scroll-padding-top: calc(var(--header-height) + var(--ticker-height) + env(safe-area-inset-top, 0px));
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -68,7 +70,8 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: clip;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 img {
@@ -293,18 +296,18 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  min-height: var(--header-height);
-  padding-top: env(safe-area-inset-top, 0px);
-  background: rgba(248, 249, 250, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  background: rgba(248, 249, 250, 0.5);
+  /* backdrop-filter: blur(12px); */
+  /* -webkit-backdrop-filter: blur(12px); */
   z-index: 1000;
   transition: background var(--transition-base), box-shadow var(--transition-base);
   border-bottom: 1px solid rgba(0, 45, 98, 0.06);
 }
 
 .header.scrolled {
-  background: rgba(248, 249, 250, 0.97);
+  background: rgba(248, 249, 250, 0.9);
   box-shadow: var(--shadow-md);
 }
 
@@ -313,6 +316,7 @@ section {
   align-items: center;
   justify-content: space-between;
   height: var(--header-height);
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
 .logo {
@@ -334,6 +338,7 @@ section {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-left: auto;
 }
 
 .nav a {
@@ -349,6 +354,18 @@ section {
 .nav a.active {
   color: var(--plum);
   /* background: var(--plum-glow); */
+}
+
+.header-donate {
+  display: none;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 940px) {
+  .header-donate {
+    display: inline-flex;
+  }
 }
 
 
@@ -397,7 +414,7 @@ section {
     height: 100vh;
     background: var(--milk);
     flex-direction: column;
-    padding: 100px 32px 32px;
+    padding: calc(var(--header-height) + var(--ticker-height) + 40px) 32px 32px;
     gap: 4px;
     box-shadow: var(--shadow-xl);
     transition: right var(--transition-base);
@@ -534,8 +551,8 @@ section {
 /* ---- Floating Donate ---- */
 .floating-donate {
   position: fixed;
-  bottom: 28px;
-  right: 28px;
+  bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+  right: calc(28px + env(safe-area-inset-right, 0px));
   z-index: 900;
   animation: float-pulse 3s ease-in-out infinite;
 }
@@ -552,47 +569,53 @@ section {
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-6px);
   }
 }
- 
- /* ---- Ticker ---- */
- .ticker-wrap {
-   width: 100%;
-   overflow: hidden;
-   background: var(--accent-warm);
-   color: white;
-   padding: 10px 0;
-   position: fixed;
-   top: calc(var(--header-height) + env(safe-area-inset-top, 0px));
-   left: 0;
-   z-index: 999;
-   box-shadow: var(--shadow-sm);
- }
- 
- .ticker {
-   display: flex;
-   white-space: nowrap;
-   animation: ticker-animation 30s linear infinite;
-   width: max-content;
- }
- 
- .ticker-item {
-   padding: 0 40px;
-   font-family: var(--font-heading);
-   font-weight: 600;
-   font-size: 0.95rem;
-   text-transform: uppercase;
-   letter-spacing: 0.08em;
-   color: white;
- }
- 
- @keyframes ticker-animation {
-   0% { transform: translateX(0); }
-   100% { transform: translateX(-50%); }
- }
- 
+
+/* ---- Ticker ---- */
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  background: var(--accent-warm);
+  color: white;
+  height: var(--ticker-height);
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 999;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.ticker {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker-animation 30s linear infinite;
+  width: max-content;
+}
+
+.ticker-item {
+  padding: 0 40px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: white;
+}
+
+@keyframes ticker-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* ---- Scroll Reveal ---- */
 .reveal {
   opacity: 0;

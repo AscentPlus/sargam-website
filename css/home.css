@@ -1,16 +1,12 @@
-/* ---- Hero ---- */
 .hero {
     position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding-top: calc(var(--header-height) + env(safe-area-inset-top, 0px));
+    padding-top: calc(var(--header-height) + var(--ticker-height) + env(safe-area-inset-top, 0px));
 }
-
-.ticker-wrap + .hero {
-    padding-top: calc(var(--header-height) + env(safe-area-inset-top, 0px) + 40px);
-}
+/* Unified header handles ticker spacing now */
 
 .hero-bg {
     position: absolute;
@@ -77,12 +73,12 @@
 }
 
 .hero-sub {
-    color: var(--plum);
+    color: white;
     font-size: 1.2rem;
     max-width: 560px;
     margin-bottom: 36px;
     line-height: 1.8;
-    text-shadow: 0 0 8px rgba(255,255,255,0.9), 0 0 15px rgba(255,255,255,0.8), 0 0 25px rgba(255,255,255,0.8);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.9), 0 0 15px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 0, 0, 0.8);
     font-weight: 700;
 }
 
@@ -96,7 +92,7 @@
     background: var(--plum);
     border-color: var(--plum);
     color: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .hero-actions .btn-secondary:hover {
@@ -672,7 +668,8 @@
 
 .team-card--featured {
     border-top-color: var(--accent-warm);
-    flex: 0 1 544px; /* 260*2 + 24 gap */
+    flex: 0 1 544px;
+    /* 260*2 + 24 gap */
 }
 
 .team-avatar {
