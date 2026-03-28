@@ -4,9 +4,8 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding-top: calc(var(--header-height) + var(--ticker-height) + env(safe-area-inset-top, 0px));
+    padding-top: calc(var(--header-height) + env(safe-area-inset-top, 0px));
 }
-/* Unified header handles ticker spacing now */
 
 .hero-bg {
     position: absolute;
