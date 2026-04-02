@@ -41,7 +41,6 @@
     cursor: pointer;
 }
 
-/* Instagram Explore Layout Pattern */
 /* Large square on the right */
 .gallery-masonry .gallery-item:nth-child(10n + 2) {
     grid-column: span 2;

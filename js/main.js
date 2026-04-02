@@ -1,7 +1,3 @@
-/* ============================================
-   MAIN.JS — Shared functionality across pages
-   ============================================ */
-
 document.addEventListener('DOMContentLoaded', () => {
     initHeader();
     initMobileNav();
@@ -153,38 +149,10 @@ function setActiveNav() {
     });
 }
 
-
-
 /* ---- Format Date ---- */
 function formatDate(dateStr) {
     const d = new Date(dateStr);
     return d.toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
-}
-
-/* ---- Create Event Card HTML ---- */
-function createEventCard(event) {
-    let badgeClass = 'badge-green';
-    let badgeText = 'Completed';
-
-    if (event.type === 'upcoming') {
-        badgeClass = 'badge-warm';
-        badgeText = 'Upcoming';
-    } else if (event.type === 'ongoing') {
-        badgeClass = 'badge-blue';
-        badgeText = 'Ongoing';
-    }
-
-    return `
-    <article class="card reveal">
-      <img src="${event.image}" alt="${event.title}" class="card-img" loading="lazy">
-      <div class="card-body">
-        <span class="badge ${badgeClass}">${badgeText}</span>
-        <h3>${event.title}</h3>
-        <p class="event-date"><strong>${formatDate(event.date)}</strong></p>
-        <p>${event.description}</p>
-      </div>
-    </article>
-  `;
 }
 
 /* ---- Donate QR Modal ---- */

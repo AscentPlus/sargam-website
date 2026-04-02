@@ -206,9 +206,6 @@
     transform: scale(1.08);
 }
 
-
-
-
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -327,7 +324,7 @@
     flex-wrap: wrap;
 }
 
-/* ---- Blog / News ---- */
+/* ---- News ---- */
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -349,8 +346,9 @@
 }
 
 .blog-date {
-    font-size: 0.8rem;
-    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-warm);
     text-transform: uppercase;
     letter-spacing: 0.04em;
     margin-bottom: 12px;
@@ -668,7 +666,6 @@
 .team-card--featured {
     border-top-color: var(--accent-warm);
     flex: 0 1 544px;
-    /* 260*2 + 24 gap */
 }
 
 .team-avatar {

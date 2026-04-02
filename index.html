@@ -69,6 +69,7 @@
         <a href="index.html#home">Home</a>
         <a href="index.html#about">About Us</a>
         <a href="index.html#events">Programs</a>
+        <a href="index.html#blog">News</a>
         <a href="gallery.html">Gallery</a>
         <a href="index.html#contact">Contact</a>
       </nav>
@@ -616,19 +617,20 @@
 
         <div class="blog-grid">
           <article class="blog-card reveal">
-            <div class="blog-date">Mar 2026</div>
-            <h3>Events in March 2026</h3>
-            <p>To be updated soon.</p>
+            <div class="blog-date">29 Mar 2026</div>
+            <h3>Remembrance of Smt. Vijayalakshmi Teacher</h3>
+            <p>The event was held in remembrance of Smt. Vijayalakshmi Teacher, who was an active member of the
+              foundation, always ready to extend a helping hand to those in need. As part of the program, a
+              compassionate outreach was carried out, providing financial assistance and essential materials
+              to the less fortunate. The occasion also marked the inauguration of the foundation's official website.</p>
           </article>
           <article class="blog-card reveal">
-            <div class="blog-date">Feb 2026</div>
-            <h3>Events in February 2026</h3>
-            <p>To be updated soon.</p>
-          </article>
-          <article class="blog-card reveal">
-            <div class="blog-date">Jan 2026</div>
-            <h3>Events in January 2026</h3>
-            <p>To be updated soon.</p>
+            <div class="blog-date">02 Nov 2025</div>
+            <h3>Sargam Charitable Foundation Inauguration</h3>
+            <p>The inauguration of Sargam Charitable Foundation was conducted by Sri. Ramesh Chennithala. The event
+              marked the beginning of the foundation's efforts to support those in need. As part of the occasion, a
+              support initiative was organized, distributing essential materials and financial aid to around forty
+              individuals.</p>
           </article>
         </div>
       </div>
@@ -669,6 +671,7 @@
           <a href="index.html#home">Home</a>
           <a href="index.html#about">About Us</a>
           <a href="index.html#events">Programs</a>
+          <a href="index.html#blog">News</a>
           <a href="gallery.html">Gallery</a>
           <a href="index.html#contact">Contact</a>
         </div>
@@ -740,9 +743,11 @@
       // Populate gallery preview
       const galleryGrid = document.getElementById('galleryPreviewGrid');
       if (galleryGrid) {
-        const photos = DataStore.getGallery();
+        const photos1 = DataStore.getGallery();
+        const photos2 = DataStore.getGallery2();
+        const allPhotos = [...photos2, ...photos1];
         // Shuffle the array to pick random images each load
-        const shuffledPhotos = [...photos].sort(() => 0.5 - Math.random());
+        const shuffledPhotos = allPhotos.sort(() => 0.5 - Math.random());
         galleryGrid.innerHTML = shuffledPhotos.slice(0, 6).map(photo => `
           <div class="gallery-item reveal">
             <img src="${photo.url}" alt="${photo.caption}" loading="lazy">

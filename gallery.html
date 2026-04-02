@@ -64,6 +64,7 @@
                 <a href="index.html#home">Home</a>
                 <a href="index.html#about">About Us</a>
                 <a href="index.html#events">Programs</a>
+                <a href="index.html#blog">News</a>
                 <a href="gallery.html" class="active">Gallery</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
@@ -89,6 +90,18 @@
 
         <!-- Gallery Grid -->
         <section class="gallery-full">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Remembrance of Smt. Vijayalakshmi Teacher</h2>
+                </div>
+                <div class="gallery-masonry" id="gallery2Grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="gallery-full" style="padding-top: 0;">
             <div class="container">
                 <div class="section-header">
                     <h2>Inauguration Ceremony</h2>
@@ -146,6 +159,7 @@
                     <a href="index.html#home">Home</a>
                     <a href="index.html#about">About Us</a>
                     <a href="index.html#events">Programs</a>
+                    <a href="index.html#blog">News</a>
                     <a href="gallery.html">Gallery</a>
                     <a href="index.html#contact">Contact</a>
                 </div>
@@ -183,11 +197,21 @@
     <script src="js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const grid = document.getElementById('galleryFullGrid');
-            const photos = DataStore.getGallery();
+            const grid1 = document.getElementById('galleryFullGrid');
+            const grid2 = document.getElementById('gallery2Grid');
+            
+            const photos1 = DataStore.getGallery();
+            const photos2 = DataStore.getGallery2();
+            const allPhotos = [...photos2, ...photos1];
 
-            grid.innerHTML = photos.map((photo, i) => `
+            grid2.innerHTML = photos2.map((photo, i) => `
         <div class="gallery-item reveal" data-index="${i}">
+          <img src="${photo.url}" alt="${photo.caption}" loading="lazy">
+        </div>
+      `).join('');
+
+            grid1.innerHTML = photos1.map((photo, i) => `
+        <div class="gallery-item reveal" data-index="${i + photos2.length}">
           <img src="${photo.url}" alt="${photo.caption}" loading="lazy">
         </div>
       `).join('');
@@ -203,7 +227,7 @@
 
             function openLightbox(index) {
                 currentIndex = index;
-                const photo = photos[index];
+                const photo = allPhotos[index];
                 lightboxImg.src = photo.url;
                 lightboxImg.alt = photo.caption;
                 lightboxCaption.textContent = photo.caption;
@@ -217,13 +241,17 @@
             }
 
             function navigate(dir) {
-                currentIndex = (currentIndex + dir + photos.length) % photos.length;
+                currentIndex = (currentIndex + dir + allPhotos.length) % allPhotos.length;
                 openLightbox(currentIndex);
             }
 
-            grid.addEventListener('click', (e) => {
-                const item = e.target.closest('.gallery-item');
-                if (item) openLightbox(parseInt(item.dataset.index));
+            [grid1, grid2].forEach(grid => {
+                if(grid){
+                    grid.addEventListener('click', (e) => {
+                        const item = e.target.closest('.gallery-item');
+                        if (item) openLightbox(parseInt(item.dataset.index));
+                    });
+                }
             });
 
             document.getElementById('lightboxClose').addEventListener('click', closeLightbox);

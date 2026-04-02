@@ -247,7 +247,6 @@ section {
   box-shadow: 0 6px 18px rgba(220, 53, 69, 0.3);
 }
 
-
 .btn-lg {
   padding: 18px 40px;
   font-size: 1.05rem;
@@ -365,7 +364,6 @@ section {
   }
 }
 
-
 .hamburger {
   display: none;
   flex-direction: column;
@@ -428,7 +426,6 @@ section {
     border-radius: var(--radius-md);
   }
 
-
   .mobile-overlay {
     position: fixed;
     inset: 0;
@@ -487,8 +484,6 @@ section {
   color: var(--milk);
   padding-left: 6px;
 }
-
-
 
 .footer-social {
   display: flex;
@@ -611,12 +606,6 @@ section {
   text-align: center;
 }
 
-
-
-.bg-milk-dark {
-  background: var(--milk-dark);
-}
-
 .mt-2 {
   margin-top: 16px;
 }
@@ -628,36 +617,6 @@ section {
 .mt-6 {
   margin-top: 48px;
 }
-
-
-
-/* Badge */
-.badge {
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  font-size: 0.775rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.badge-warm {
-  background: rgba(245, 166, 35, 0.12);
-  color: var(--accent-warm);
-}
-
-
-.badge-green {
-  background: rgba(94, 155, 118, 0.12);
-  color: var(--accent-green);
-}
-
-.badge-blue {
-  background: rgba(54, 162, 235, 0.12);
-  color: #36a2eb;
-}
-
 
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
@@ -754,7 +713,6 @@ section {
 .donate-qr-modal.active .donate-qr-content {
   transform: translateY(0);
 }
-
 
 .donate-qr-content h3 {
   margin-bottom: 8px;
